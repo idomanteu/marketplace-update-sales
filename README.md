@@ -1,6 +1,11 @@
 # marketplace-update-sales
 Python script to automatically record Marketplace.tf sales to a Google Sheets spreadsheet.
 
+<img width="1382" alt="Screenshot 2024-06-12 at 5 06 10 PM" src="https://github.com/idomanteu/marketplace-update-sales/assets/126209266/a9c553ca-72fb-4b94-b24a-10b6277b2b82">
+
+
+___
+
 Required Python libraries:
 
 `pip install gspread`
