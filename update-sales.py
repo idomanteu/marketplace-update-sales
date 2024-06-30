@@ -21,7 +21,7 @@ def Reconnect():
     global sh
     global main
     global msh
-    # global botbulk
+    global botbulk
     global unfiltered
     global ids
     print('reconnecting')
@@ -37,8 +37,8 @@ def Reconnect():
         main = sh.worksheet("TF2")
         #Similarly but for max heads
         msh = sh.worksheet("MSH")
-        #Similarly but for bp buys
-        # botbulk = sh.worksheet("Bot Bulk")
+        #Similarly but for bot bulk
+        botbulk = sh.worksheet("Bot Bulk")
         #Move all unfound items here
         unfiltered = sh.worksheet("Unrecorded Sales")
         #list of all ids
@@ -48,7 +48,7 @@ def Reconnect():
         print(e)
         time.sleep(10)
         return Reconnect()
-    return scope, gc, sh, main, msh, unfiltered, ids
+    return scope, gc, sh, main, msh, botbulk, unfiltered, ids
 
 
 def rate_limit(max_calls, timespan):
@@ -368,7 +368,7 @@ try:
                         else:  # item was already sold, move onto next
                             continue
 
-                    # if found == 0:  # no valid items, check the botbulk sheet
+                    if found == 0:  # no valid items, check the botbulk sheet
                         while True:
                             try:
                                 search = limiter(botbulk.findall(name))
@@ -458,9 +458,9 @@ try:
                     else:
                         raise(e)
 
-            #if initial == 1:
-            #    break  # no need to search any more
-            #else:
+            # if initial == 1:
+                # break  # no need to search any more
+            # else:
 
         if len(unsold) > 0:
             delgroup = []
@@ -527,7 +527,7 @@ try:
                                     else:  # item was already sold, move onto next
                                         continue
 
-                                # if found == 0:  # no valid items, check the botbulk sheet
+                                if found == 0:  # no valid items, check the botbulk sheet
                                     while True:
                                         try:
                                             search = limiter(botbulk.findall(name))
