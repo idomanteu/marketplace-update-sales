@@ -21,6 +21,7 @@ Required Python libraries:
   - `TF2` - Matches and records items in your main sheet
   - `MSH` - Matches and records sales for Max's Severed Heads (Optional, but you will need to make an empty sheet for it anyway)
   - `Unrecorded Sales` - Records all otherwise unrecorded sales
+  - `Bot Bulk` - Used to record all bulk items
   - `IDs` - Used to write all sales IDs
 4) Update the `LASTSEARCH` variable in the .env file with the first sale you'd like to record. The script will paginate through all sales & continue to refresh as long as it's running.
 
