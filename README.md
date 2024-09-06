@@ -7,6 +7,9 @@ Python script to automatically record Marketplace.tf sales to a Google Sheets sp
 Records & matches Marketplace.tf item sales from a CSV export (must be an item export). All columns except item, date purchased, and price paid are automatically filled. For unrecorded sales, all data is automatically entered. Column formatting is self explanatory. 
 
 Sheet name = Master Spreadsheet
+
 Main worksheet = TF2
+
 Max's worksheet = MSH
+
 Unfiltered worksheet = Unrecorded Sales
