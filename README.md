@@ -13,3 +13,6 @@ Main worksheet = TF2
 Max's worksheet = MSH
 
 Unfiltered worksheet = Unrecorded Sales
+
+z = pd.read_csv('marketplace_sales_76561199183171982_items.csv')
+replace steamid --> :STONKS:
